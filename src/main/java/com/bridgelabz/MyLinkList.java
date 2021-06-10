@@ -9,7 +9,7 @@ public class MyLinkList <T> {
         this.last = null;
     }
 
-    public void addAtLast(MyNode newNode) {
+    public void addAtStart(MyNode newNode) {
         if(last == null) {
             last = newNode;
         }
@@ -23,7 +23,7 @@ public class MyLinkList <T> {
         }
     }
 
-    public void addAtStart(MyNode newNode) {
+    public void addAtLast(MyNode newNode) {
         if(start == null) {
             start = newNode;
         }
@@ -42,5 +42,11 @@ public class MyLinkList <T> {
         }
         newNode.setNext(tempNode.getNext());
         tempNode.setNext(newNode);
+    }
+
+    public MyNode RemoveAtStart() {
+        MyNode temp = this.start;
+        this.start = start.getNext();
+        return temp;
     }
 }
