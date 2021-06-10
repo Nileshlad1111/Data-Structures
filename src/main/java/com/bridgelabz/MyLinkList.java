@@ -61,4 +61,19 @@ public class MyLinkList <T> {
         temp = temp.getNext();
         return temp;
     }
+
+    public boolean findNode(T key) {
+        MyNode temp = start;
+        boolean found = true;
+        System.out.println(temp);
+        while (temp != null && temp.getNext() != null) {
+            if (temp.getKey() == key) {
+                found = true;
+            }
+            else {
+                temp = temp.getNext();
+            }
+        }
+        return found;
+    }
 }

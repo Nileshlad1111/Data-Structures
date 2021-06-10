@@ -140,5 +140,21 @@ public class MyLinkListTest {
                 myCreatedLinkList.last.equals(newSNode);
         Assert.assertTrue(isLinkedListCreated);
     }
+
+    @Test
+    public void provideNode_whenSearchNumber_ShouldReturnTrue()
+    {
+        MyNode<Integer> newFNode = new MyNode<>(56);
+        MyNode<Integer> newSNode = new MyNode<>(30);
+        MyNode<Integer> newTNode = new MyNode<>(70);
+        MyLinkList myCreatedLinkList = new MyLinkList();
+        myCreatedLinkList.addAtLast(newFNode);
+        myCreatedLinkList.addAtLast(newSNode);
+        myCreatedLinkList.addAtLast(newTNode);
+
+        boolean isNodeFound = myCreatedLinkList.findNode(30);
+        Assert.assertTrue(isNodeFound);
+    }
+
 }
 

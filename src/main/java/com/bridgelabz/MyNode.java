@@ -23,4 +23,12 @@ public class MyNode<T> {
     public void setKey(T key) {
         this.key = key;
     }
+
+    @Override
+    public String toString() {
+        return "MyNode{" +
+                "next=" + next +
+                ", key=" + key +
+                '}';
+    }
 }
