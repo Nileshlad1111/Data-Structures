@@ -106,7 +106,7 @@ public class MyLinkListTest {
 
     //delete head element
     @Test
-    public void deleteSecondNumber_WhenSecondWillBeDeleted_TestCaseShouldPass()
+    public void deleteStartNumber_WhenStartWillBeDeleted_TestCaseShouldPass()
     {
         MyNode<Integer> newFNode = new MyNode<>(56);
         MyNode<Integer> newSNode = new MyNode<>(30);
@@ -124,7 +124,7 @@ public class MyLinkListTest {
     }
 
     @Test
-    public void deleteSecondNumber_WhenSecondWillNotBeDeleted_TestShouldReturnFalse()
+    public void deleteLastNumber_WhenLastWillBeDeleted_TestCaseShouldPass()
     {
         MyNode<Integer> newFNode = new MyNode<>(56);
         MyNode<Integer> newSNode = new MyNode<>(30);
@@ -134,12 +134,11 @@ public class MyLinkListTest {
         myCreatedLinkList.addAtLast(newSNode);
         myCreatedLinkList.addAtLast(newTNode);
 
-        myCreatedLinkList.RemoveAtStart();
+        myCreatedLinkList.RemoveAtLast();
 
         boolean isLinkedListCreated =myCreatedLinkList.start.equals(newFNode) &&
-                myCreatedLinkList.start.getNext().equals(newSNode) &&
-                myCreatedLinkList.last.equals(newTNode);
-        Assert.assertFalse(isLinkedListCreated);
+                myCreatedLinkList.last.equals(newSNode);
+        Assert.assertTrue(isLinkedListCreated);
     }
 }
 

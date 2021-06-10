@@ -49,4 +49,16 @@ public class MyLinkList <T> {
         this.start = start.getNext();
         return temp;
     }
+
+    public MyNode RemoveAtLast() {
+
+        MyNode temp = start;
+        while (!temp.getNext().equals(last))
+        {
+            temp = temp.getNext();
+        }
+        this.last = temp;
+        temp = temp.getNext();
+        return temp;
+    }
 }
