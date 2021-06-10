@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.MyLinkListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-10T09:38:44" hostname="LAPTOP-DILI6N8Q" time="0.006">
+<testsuite name="com.bridgelabz.MyLinkListTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-06-10T09:49:43" hostname="LAPTOP-DILI6N8Q" time="0.007">
   <properties/>
-  <testcase name="provideThreeNumber_WhenLinked_shouldTestCasePassed" classname="com.bridgelabz.MyLinkListTest" time="0.006"/>
+  <testcase name="provideThreeNumber_WhenLinked_shouldTestCasePassed" classname="com.bridgelabz.MyLinkListTest" time="0.004"/>
+  <testcase name="provideThreeNumber_WhenAddedToTop_ShouldTestCasePassed" classname="com.bridgelabz.MyLinkListTest" time="0.001"/>
+  <testcase name="provideThreeNumber_WhenNotAddedToTop_ShouldReturnFalse" classname="com.bridgelabz.MyLinkListTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
