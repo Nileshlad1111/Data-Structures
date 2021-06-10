@@ -118,7 +118,7 @@ public class MyLinkListTest {
 
         myCreatedLinkList.RemoveAtStart();
 
-        boolean isLinkedListCreated =myCreatedLinkList.start.equals(newSNode) &&
+        boolean isLinkedListCreated = myCreatedLinkList.start.equals(newSNode) &&
                 myCreatedLinkList.last.equals(newTNode);
         Assert.assertTrue(isLinkedListCreated);
     }
@@ -136,11 +136,12 @@ public class MyLinkListTest {
 
         myCreatedLinkList.RemoveAtLast();
 
-        boolean isLinkedListCreated =myCreatedLinkList.start.equals(newFNode) &&
+        boolean isLinkedListCreated = myCreatedLinkList.start.equals(newFNode) &&
                 myCreatedLinkList.last.equals(newSNode);
         Assert.assertTrue(isLinkedListCreated);
     }
 
+    //search node
     @Test
     public void provideNode_whenSearchNumber_ShouldReturnTrue()
     {
@@ -154,6 +155,28 @@ public class MyLinkListTest {
 
         boolean isNodeFound = myCreatedLinkList.findNode(30);
         Assert.assertTrue(isNodeFound);
+    }
+
+    //after search node element
+    @Test
+    public void provideNumber_ShouldAddAfter_WhenAddedTestCaseShouldPassed()
+    {
+        MyNode<Integer> newFNode = new MyNode<>(56);
+        MyNode<Integer> newSNode = new MyNode<>(30);
+        MyNode<Integer> newTNode = new MyNode<>(70);
+        MyNode<Integer> newNodeToAdd = new MyNode<>(40);
+        MyLinkList myCreatedLinkList = new MyLinkList();
+        myCreatedLinkList.addAtLast(newFNode);
+        myCreatedLinkList.addAtLast(newSNode);
+        myCreatedLinkList.addAtLast(newTNode);
+
+        myCreatedLinkList.addAfterSearchedPosition(newSNode, newNodeToAdd);
+
+        boolean isLinkedListCreated = myCreatedLinkList.start.equals(newFNode) &&
+                myCreatedLinkList.start.getNext().equals(newSNode) &&
+                myCreatedLinkList.start.getNext().getNext().equals(newNodeToAdd) &&
+                myCreatedLinkList.last.equals(newTNode);
+        Assert.assertTrue(isLinkedListCreated);
     }
 
 }

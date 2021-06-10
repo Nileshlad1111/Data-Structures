@@ -76,4 +76,15 @@ public class MyLinkList <T> {
         }
         return found;
     }
+
+    public void addAfterSearchedPosition(MyNode mySelectedNode, MyNode newNode)
+    {
+        MyNode tempNode = this.start;
+        while (!tempNode.getNext().equals(mySelectedNode.getNext())) {
+            tempNode = tempNode.getNext();
+        }
+
+        newNode.setNext(tempNode.getNext().getNext());
+        tempNode.setNext(newNode);
+    }
 }

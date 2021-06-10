@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.MyLinkListTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-06-10T11:54:27" hostname="LAPTOP-DILI6N8Q" time="0.022">
+<testsuite name="com.bridgelabz.MyLinkListTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-06-10T12:08:19" hostname="LAPTOP-DILI6N8Q" time="0.02">
   <properties/>
   <testcase name="provideThreeNumber_WhenNotAddedToTop_ShouldTestCaseNotPassed" classname="com.bridgelabz.MyLinkListTest" time="0.005"/>
   <testcase name="provideThreeNumber_WhenAddedToUserPosition_ShouldReturnTrue" classname="com.bridgelabz.MyLinkListTest" time="0.0"/>
@@ -7,8 +7,9 @@
   <testcase name="provideThreeNumber_WhenLinked_shouldTestCasePassed" classname="com.bridgelabz.MyLinkListTest" time="0.0"/>
   <testcase name="provideThreeNumber_WhenAddedToTop_ShouldTestCasePassed" classname="com.bridgelabz.MyLinkListTest" time="0.0"/>
   <testcase name="provideThreeNumber_WhenAddedToLast_ShouldTestCasePassed" classname="com.bridgelabz.MyLinkListTest" time="0.0"/>
-  <testcase name="deleteLastNumber_WhenLastWillBeDeleted_TestCaseShouldPass" classname="com.bridgelabz.MyLinkListTest" time="0.0"/>
-  <testcase name="provideNode_whenSearchNumber_ShouldReturnTrue" classname="com.bridgelabz.MyLinkListTest" time="0.011"/>
+  <testcase name="deleteLastNumber_WhenLastWillBeDeleted_TestCaseShouldPass" classname="com.bridgelabz.MyLinkListTest" time="0.001"/>
+  <testcase name="provideNode_whenSearchNumber_ShouldReturnTrue" classname="com.bridgelabz.MyLinkListTest" time="0.009"/>
+  <testcase name="provideNumber_ShouldAddAfter_WhenAddedTestCaseShouldPassed" classname="com.bridgelabz.MyLinkListTest" time="0.0"/>
   <testcase name="deleteStartNumber_WhenStartWillBeDeleted_TestCaseShouldPass" classname="com.bridgelabz.MyLinkListTest" time="0.0"/>
   <system-out><![CDATA[MyNode{next=MyNode{next=MyNode{next=null, key=null}, key=null}, key=null}
 ]]></system-out>
