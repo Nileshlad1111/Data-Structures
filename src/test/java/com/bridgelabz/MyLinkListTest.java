@@ -17,7 +17,7 @@ public class MyLinkListTest {
         Assert.assertTrue(result);
     }
 
-    //adding top element
+    //adding last element
     @Test
     public void provideThreeNumber_WhenAddedToTop_ShouldTestCasePassed(){
         MyNode<Integer> newFNode = new MyNode<>(30);
@@ -51,7 +51,7 @@ public class MyLinkListTest {
         Assert.assertFalse(isLinkedListCreated);
     }
 
-    //adding in last element
+    //adding in top element
     @Test
     public void provideThreeNumber_WhenAddedToLast_ShouldTestCasePassed()
     {
@@ -84,6 +84,26 @@ public class MyLinkListTest {
                 myCreatedLinkList.start.getNext().equals(newSNode) &&
                 myCreatedLinkList.last.equals(newFNode);
         Assert.assertFalse(isLinkedListCreated);
+    }
+
+    //insert element
+
+    @Test
+    public void provideThreeNumber_WhenAddedToUserPosition_ShouldReturnTrue()
+    {
+        MyNode<Integer> newFNode = new MyNode<>(56);
+        MyNode<Integer> newSNode = new MyNode<>(70);
+        MyNode<Integer> nodeToInsert = new MyNode<>(30);
+        MyLinkList myCreatedLinkList = new MyLinkList();
+        myCreatedLinkList.addAtLast(newFNode);
+        myCreatedLinkList.addAtStart(newSNode);
+
+        myCreatedLinkList.addAtSelectedPosition(newFNode, nodeToInsert);
+
+        boolean isLinkedListCreated = myCreatedLinkList.start.equals(newFNode) &&
+                myCreatedLinkList.start.getNext().equals(nodeToInsert) &&
+                myCreatedLinkList.last.equals(newSNode);
+        Assert.assertTrue(isLinkedListCreated);
     }
 }
 
